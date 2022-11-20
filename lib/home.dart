@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
   Future _getData() async {
     try {
       final response = await http.get(Uri.parse(
-          'https://newsapi.org/v2/top-headlines?country=id&category=business&apiKey=407235c730674446afc086dda95443f4'));
+          'https://newsapi.org/v2/everything?q=tesla&from=2022-10-20&sortBy=publishedAt&apiKey=407235c730674446afc086dda95443f4'));
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
         setState(() {
